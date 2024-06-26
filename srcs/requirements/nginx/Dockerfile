@@ -14,9 +14,9 @@ RUN mkdir -p /etc/nginx/ssl \
         -x509 \
         -newkey rsa:2048 \
         -nodes \ 
-        -keyout /etc/nginx/ssl/nginx-unsecured.key \
-        -out /etc/nginx/ssl/nginx-selfsigned.crt \
-        -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=yasaidi.42.fr"
+        -keyout /etc/nginx/ssl/private.key \
+        -out /etc/nginx/ssl/certificate.crt \
+        -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=yasaidi.42.fr/UID=yasaidi"
 
 CMD ["nginx", "-g", "daemon off;"]
 
