@@ -8,8 +8,6 @@ RUN apt-get update \
 
 COPY ./conf/mariadbconfig.cnf /etc/mysql/mariadb.conf.d/mariadbconfig.cnf
 
-# Expose le port 3306 utilisé par MariaDB pour les connexions
 EXPOSE 3306
 
-# Démarre le serveur MariaDB au démarrage du conteneur
 CMD ["mysqld"]
